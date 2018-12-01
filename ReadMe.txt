@@ -6,7 +6,7 @@ Requires MATLAB R2015b or later.
 
 This directory includes:
 
-   1) example.m -------- an example run of SOptSC on a specific dataset (see here for QUICKSTART).
+   1) example.m -------- an example run of scRCNMF on a specific dataset (see here for QUICKSTART).
    
    2) scRCMF_cluster.m  --------the M file contains all components of the algorithm for clusters. 
     Please refer to this file for further information.
