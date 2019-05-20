@@ -6,7 +6,7 @@ addpath('Data');
 addpath('Cluster');
 addpath('TC');
 
-
+%input data
 cell_data=load('sim_data.mat');
 
 %group2=idx;
@@ -35,17 +35,17 @@ Co_module  = Cell_cluster(H,W,c);%
 tc_module = identify_tc(H,c);
  % Output
 %   -- Co_module: Cell clusters corresponding key genes.
-%  -- tc_module£ºtransition states between  cell clusters
+%  -- tc_moduleÂ£:transition states between  cell clusters
 
 %% Step 3: Run scRCMF to analyse transition states 
 TE=scRCMF_TE(H);
  % Output
-%  -- TE: Entropy of transition states corresponding cluster label
+%  -- scEntropy: Entropy of transition states corresponding cluster label
 
 U=scRCMF_TP(data,H,Co_module,tc_module);
-%  -- pt: transition probability from  transition state to corresponding cell cluster
+%  -- scTP: transition probability from  transition state to corresponding cell cluster
 
-%% Step 3: select differnential gene 
+%% Step 4: select differnential gene 
 %gene_set=gene_pattern(cell_data,Co_module,tc_module,K,gene_name);%HEE data
 
 
